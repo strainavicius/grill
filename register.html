@@ -1,0 +1,73 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+setlocale(LC_ALL, 0);
+session_start();
+if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"]){
+  header("location: index.html");
+  exit;
+}
+include "config.html";
+
+if(isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["email"]) && isset($_POST["password1"])
+&& isset($_POST["password2"]) && isset($_POST['address']) && isset($_POST['phone']))
+	{
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+		$email = $_POST["email"];
+    $password1 = $_POST["password1"];
+		$password2 = $_POST["password2"];
+		$address = $_POST['address'];
+		$phone = $_POST['phone'];
+
+    if($password1 !== $password2){
+      echo "Slaptažodžiai nesutampa!";
+      return false;
+    }
+
+    $firstname = mysqli_real_escape_string($db, $firstname);
+    $lastname = mysqli_real_escape_string($db, $lastname);
+		$email = mysqli_real_escape_string($db, $email);
+		$address = mysqli_real_escape_string($db, $address);
+		$phone = mysqli_real_escape_string($db, $phone);
+    $password = md5($password1);
+
+    if (strlen($password1) <= '8') {
+        echo "Slaptažodį turi sudaryti mažiausiai 8 simboliai";
+        return false;
+    }
+    if (!preg_match("/^[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ]*$/",$firstname) || !preg_match("/^[a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ]*$/",$lastname)) {
+      echo "Leistinos tik raidės varde ir pavardėje!";
+      return false;
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo "Nurodytas netinkamas el.pašto adresas!";
+      return false;
+    }
+
+		$sql="SELECT id FROM users WHERE email='$email'";
+		$result=mysqli_query($db,$sql);
+		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+		if(mysqli_num_rows($result) == 1)
+		{
+      echo "Šis el.pašto adresas jau registruotas!";
+      return false;
+		}
+		else
+		{
+			$query = mysqli_query($db, "INSERT INTO users (firstname, lastname, email, password, address, phone)
+      VALUES ('$firstname', '$lastname', '$email', '$password', '$address', '$phone')");
+			if($query)
+			{
+				echo "Sėkmingai užsiregistravote į mūsų sistemą!";
+				$_SESSION['loggedIn'] = true;
+				$_SESSION['firstname'] = $firstname;
+				$_SESSION['lastname'] = $firstname;
+				$_SESSION['address'] = $address;
+				$_SESSION['id'] = $db->insert_id;
+			} else {
+				echo "Įvyko klaida!";
+			}
+
+    }
+  }

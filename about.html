@@ -1,0 +1,315 @@
+<?php
+include 'config.html';
+header('Content-Type: text/html; charset=utf-8');
+setlocale(LC_ALL, 0);
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Grill Street</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+	<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+	<link href="plugins/jquery-datepicker/jquery-ui.css" rel="stylesheet" type="text/css">
+	<link href="plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="styles/about.css">
+	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+	<link rel="stylesheet" type="text/css" href="styles/preloader.css">
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						</div>
+						<nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<li><a href="index.html">Pradžia</a></li>
+								<li><a href="about.html">Apie mus</a></li>
+								<li><a href="">Meniu</a></li>
+								<li><a href="">Rezervacija</a></li>
+								<li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Registracija</a></li>';
+								<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+	</div>
+	</header>
+
+	<!-- Hamburger -->
+
+	<div class="hamburger_bar trans_400 d-flex flex-row align-items-center justify-content-start">
+		<div class="hamburger">
+			<div class="menu_toggle d-flex flex-row align-items-center justify-content-start">
+				<span>Meniu</span>
+				<div class="hamburger_container">
+					<div class="menu_hamburger">
+						<div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+						<div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+						<div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Menu -->
+
+	<div class="menu trans_800">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<ul>
+				<li><a href="index.html">Pradžia</a></li>
+				<li><a href="about.html">Apie mus</a></li>
+				<li><a href="">Meniu</a></li>
+				<li><a href="">Rezervacija</a></li>
+				<li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Registracija</a></li>
+				<li><a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Home -->
+
+	<!-- Home -->
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/apiemus.png" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+
+							<div class="home_title">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contact -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact_title">Apie mus</div>
+					<div class="contact_text">
+						<p>Mūsų restoranas įsikūręs vienoje iš pagrindinių Vilniaus gatvių. Vilniaus g.25 šis restoranas puikiai tinka tiek šeimos, tiek draugų susitikimams, kadangi meniu yra pritaikytas visiems! lauksime jūsų atvykstant į mūsų restoraną!</p>
+					</div>
+					<div class="contact_logo_container">
+						<div class="contact_logo_title">GRILL</div>
+						<div class="contact_logo_subtitle">Street</div>
+					</div>
+				</div>
+				<div class="col-xl-5 col-lg-6">
+					<div class="contact_list_container d-flex flex-column align-items-lg-center justify-content-start">
+						<div class="contact_list_content">
+							<ul class="contact_list">
+								<li class="d-flex flex-row align-items-start justify-content-start">
+									<div><div>Adresas:</div></div>
+									<div>Vilniaus g. 25 </div>
+								</li>
+								<li class="d-flex flex-row align-items-start justify-content-start">
+									<div><div>Tel.Numeris:</div></div>
+									<div>+37067456621</div>
+								</li>
+								<li class="d-flex flex-row align-items-start justify-content-start">
+									<div><div>El.paštas:</div></div>
+									<div>Grillstreet@gmail.com</div>
+								</li>
+							</ul>
+							<div class="contact_social">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row google_map_row">
+				<div class="col">
+
+					<!-- Contact Map -->
+
+					<div class="contact_map">
+
+						<!-- Google Map -->
+					<div class="map-responsive">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.390601014986!2d25.277036016058535!3d54.68515378128744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9411bdac4d15%3A0x3a76af0fcaea9fdf!2sVilniaus%20g.%2025%2C%20Vilnius%2001402!5e0!3m2!1slt!2slt!4v1578060139582!5m2!1slt!2slt"
+						width="1200" height="600" frameborder="0" style="border:0;"
+						allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="register-modal" tabindex="-1" role="dialog"
+	aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+							aria-controls="home" aria-selected="true">Registruotis</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+							aria-controls="profile" aria-selected="false">Prisijungti</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<form>
+								<div class="form-group">
+									<label for="reg-fname">Vardas</label>
+									<input type="text" class="form-control" id="reg-fname" />
+								</div>
+								<div class="form-group">
+									<label for="reg-lname">Pavardė</label>
+									<input type="text" class="form-control" id="reg-lname" />
+								</div>
+								<div class="form-group">
+									<label for="reg-address">Adresas</label>
+									<input type="text" class="form-control" id="reg-address" />
+								</div>
+								<label>Telefono numeris</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">+</div>
+									</div>
+									<input type="text" class="form-control" id="reg-phone">
+								</div>
+								<div class="form-group">
+									<label for="reg-email">El. paštas</label>
+									<input type="email" class="form-control" id="reg-email" />
+								</div>
+								<div class="form-group">
+									<label for="reg-pass-1">Slaptažodis</label>
+									<input type="password" class="form-control" id="reg-pass-1">
+								</div>
+								<div class="form-group">
+									<label for="reg-pass-2">Pakartokite slaptažodį</label>
+									<input type="password" class="form-control" id="reg-pass-2">
+								</div>
+								<button type="button" class="btn btn-dark w-100" id="reg-btn">Registruotis</button>
+							</form>
+						</div>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<form>
+								<div class="form-group">
+									<label for="login-email">El. paštas</label>
+									<input type="email" class="form-control" id="login-email" />
+								</div>
+								<div class="form-group">
+									<label for="login-pass">Slaptažodis</label>
+									<input type="password" class="form-control" id="login-pass">
+								</div>
+								<button type="button" class="btn btn-dark w-100" id="login-btn">Prisijungti</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Footer Logo -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_logo">
+						<div class="footer_logo_title">GRILL</div>
+						<div class="footer_logo_subtitle">STREET</div>
+					</div>
+
+				</div>
+
+				<!-- Footer About -->
+				<div class="col-lg-6 footer_col">
+					<div class="footer_about">
+					</div>
+				</div>
+
+				<!-- Footer Contact -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_contact">
+						<ul>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div>
+									<div class="footer_contact_title">Adresas:</div>
+								</div>
+								<div class="footer_contact_text">Vilniaus g.25</div>
+							</li>
+							<li class="d-flex flex-row align-items-start justify-content-start">
+								<div>
+									<div class="footer_contact_title">Restorano telefono numeris:</div>
+								</div>
+								<div class="footer_contact_text_1"> +37067456621 </div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	</div>
+
+	<div id="preloader"></div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap-4.1.2/popper.js"></script>
+	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+	<script src="plugins/greensock/TweenMax.min.js"></script>
+	<script src="plugins/greensock/TimelineMax.min.js"></script>
+	<script src="plugins/greensock/animation.gsap.min.js"></script>
+	<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+	<script src="plugins/easing/easing.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+	<script src="plugins/jquery-datepicker/jquery-ui.js"></script>
+	<script src="plugins/jquery-timepicker/jquery.timepicker.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/loader.js"></script>
+	<script src="js/user_actions.js"></script>
+</body>
+
+</html>
